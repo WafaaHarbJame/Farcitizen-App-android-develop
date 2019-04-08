@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "location": "WeWork Medellín",
+    "home_server": "https://albany.farcitizen.com",
+    "id_server": "https://id.farcitizen.com"
+  },
+  {
+    "id": 2,
+    "location": "Medellín",
+    "home_server": "https://matrix.farcitizen.com",
+    "id_server": "https://id.farcitizen.com"
+  },
+  {
+    "id": 3,
+    "location": "Bogotá",
+    "home_server": "https://bogota.farcitizen.com",
+    "id_server": "https://id.farcitizen.com"
+  },
+  {
+    "id": 4,
+    "location": "Mexico City",
+    "home_server": "https://mexico.farcitizen.com",
+    "id_server": "https://id.farcitizen.com"
+  }
+]

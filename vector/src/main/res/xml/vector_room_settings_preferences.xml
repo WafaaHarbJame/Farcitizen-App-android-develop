@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- this section has no title in purpose -->
+    <ms.messageapp.preference.RoomAvatarPreference
+        android:key="roomPhotoAvatar"
+        android:title="@string/room_settings_room_photo" />
+
+    <EditTextPreference
+        android:focusable="true"
+        android:key="roomNameEditText"
+        android:title="@string/room_settings_room_name" />
+
+    <EditTextPreference
+        android:focusable="true"
+        android:key="roomTopicEditText"
+        android:title="@string/room_settings_topic" />
+
+    <ListPreference
+        android:dialogTitle="@string/room_settings_tag_pref_dialog_title"
+        android:entries="@array/tag_entries"
+        android:entryValues="@array/tag_values"
+        android:key="roomTagList"
+        android:summary="%s"
+        android:title="@string/room_settings_room_tag" />
+
+    <!-- the notification rule selection -->
+    <ListPreference
+        android:entries="@array/notification_entries"
+        android:entryValues="@array/notification_values"
+        android:key="roomNotificationPreference"
+        android:summary="%s"
+        android:title="@string/room_settings_room_notifications_title" />
+
+    <ms.messageapp.preference.VectorPreference
+        android:key="roomLeave"
+        android:title="@string/leave" />
+
+    <ms.messageapp.preference.VectorPreferenceDivider />
+
+    <ms.messageapp.preference.VectorPreferenceCategory
+        android:key="prefCatAccessVisibility"
+        android:title="@string/room_settings_category_access_visibility_title">
+
+        <!-- indicate if the room name should listed in the room directory list -->
+        <ms.messageapp.preference.VectorSwitchPreference
+            android:key="roomNameListedInDirectorySwitch"
+            android:title="@string/room_settings_directory_visibility" />
+
+        <!-- for further use
+        <im.vector.preference.VectorPreference
+            android:key="roomPrivacyInfo"
+            android:title="@string/settings_room_privacy_label" /> -->
+
+        <!-- room access rules (Who can access?) -->
+        <ms.messageapp.preference.VectorListPreference
+            android:dialogTitle="@string/room_settings_room_access_rules_pref_dialog_title"
+            android:entries="@array/room_access_rules_entries"
+            android:entryValues="@array/room_access_rules_values"
+            android:key="roomAccessRulesList"
+            android:summary="%s"
+            android:title="@string/room_settings_room_access_rules_pref_title" />
+
+        <!-- room read history (Who can read history?) -->
+        <ListPreference
+            android:dialogTitle="@string/room_settings_room_read_history_rules_pref_dialog_title"
+            android:entries="@array/room_read_history_rules_entries"
+            android:entryValues="@array/room_read_history_rules_values"
+            android:key="roomReadHistoryRulesList"
+            android:summary="%s"
+            android:title="@string/room_settings_room_read_history_rules_pref_title" />
+    </ms.messageapp.preference.VectorPreferenceCategory>
+
+    <ms.messageapp.preference.VectorPreferenceDivider />
+
+    <ms.messageapp.preference.VectorPreferenceCategory
+        android:key="addresses"
+        android:title="@string/room_settings_addresses_pref_title">
+
+    </ms.messageapp.preference.VectorPreferenceCategory>
+
+    <ms.messageapp.preference.VectorPreferenceDivider android:key="flair_divider" />
+
+    <ms.messageapp.preference.VectorPreferenceCategory
+        android:key="flair"
+        android:title="@string/settings_flair" />
+
+    <ms.messageapp.preference.VectorPreferenceDivider android:key="banned_divider" />
+
+    <ms.messageapp.preference.VectorPreferenceCategory
+        android:key="banned"
+        android:title="@string/room_settings_banned_users_title" />
+
+    <ms.messageapp.preference.VectorPreferenceDivider />
+
+    <ms.messageapp.preference.VectorPreferenceCategory
+        android:key="advanced"
+        android:title="@string/room_settings_category_advanced_title">
+
+        <ms.messageapp.preference.VectorPreference
+            android:key="roomInternalId"
+            android:title="@string/room_settings_room_internal_id" />
+
+        <ms.messageapp.preference.VectorSwitchPreference
+            android:key="@string/room_settings_never_send_to_unverified_devices_title"
+            android:summary="@string/room_settings_never_send_to_unverified_devices_summary"
+            android:title="@string/room_settings_never_send_to_unverified_devices_title" />
+
+    </ms.messageapp.preference.VectorPreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>
