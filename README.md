@@ -1,5 +1,4 @@
-
- Far citizen  is an Android Matrix client.
+Far citizen  is an Android application
 
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="60">](https://play.google.com/store/apps/details?id=ms.messageapp.alpha&hl=en&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
@@ -98,3 +97,20 @@ FAQ
 
 2. Where the apk is generated?
 riot-android-develop (1)\riot-android-develop\vector\app\release
+
+
+3. How to make release apk ?
+
+  * if you want to update the app and make new apk just following the steps  go to riot android develop "build.gradle"
+     and change these: 
+    versionCodeProp = 3
+    versionNameProp = "0.3.26-dev"
+  * by increasing the version code plus one or any number that can't be used in another copy apk for the app
+	and then click sync  and wait for finish sync 
+	
+  *   After finish go to build menu and choose generate signed apk  then choose apk the  screen appear and choose the .jks file
+	 that you have,  put the password and the key  then clcik next then choose app Release and choose the two option the full apk           and jar file and wait to finish building the app after finish you can find the apk.
+  *  when error find make clean project then rebuild the project after finish click locate  to find the apk  
+     app> relese> vector-app-release  then You can save the location or copy it in any place  then go to google play console 
+	  choose the app ,Release managment  then create release and upload  the release and wait to finish uploadin  after finish must     the verison be different from the previous.
+	  
